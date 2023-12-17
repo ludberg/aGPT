@@ -1,0 +1,98 @@
+{
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "gpt",
+    "version": "1.5.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true,
+      "protocol": {
+        "all": false,
+        "asset": true,
+        "assetScope": ["**"]
+      }
+    },
+    "cli": {
+      "description": "Min description",
+      "longDescription": "Min längre description",
+      "beforeHelp": "Före hjälpen",
+      "afterHelp": "Efter hjälpen",
+      "args": [
+        {
+          "name": "prompt",
+          "short": "p",
+          "takesValue": true,
+          "minValues": 1,
+          "multiple": true
+        },
+        {
+          "name": "screenshot",
+          "short": "s",
+          "takesValue": false
+        },
+        {
+          "name": "cw",
+          "takesValue": false
+        }
+      ],
+      "subcommands": {
+        "subcommand-name": {}
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.gpt.dev",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: https://asset.localhost"
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 100,
+        "resizable": true,
+        "title": "gpt",
+        "width": 800
+      }
+    ]
+  }
+}
