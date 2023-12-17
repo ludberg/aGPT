@@ -6,6 +6,8 @@
 - Ändra storleken på footern (och fönstret) när man skriver en lång prompt
 - Kunna välja modell på settings-vyn
 - Kunna ta ett screenshot på vilken skärm som helst
+- Kunna generera bilder
+- Markdown med kod ska visa färger
 
 
 ## Fixat
